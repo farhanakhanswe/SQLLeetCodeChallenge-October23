@@ -1,4 +1,4 @@
-# Question Link: https://leetcode.com/problems/game-play-analysis-i/submissions/
+# Question Link: https://leetcode.com/problems/game-play-analysis-i
 
 # Solution:
 
