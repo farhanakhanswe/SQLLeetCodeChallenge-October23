@@ -2,6 +2,7 @@
 
 # Solution:
 
-SELECT class FROM courses
+SELECT class 
+FROM courses
 GROUP BY class
 HAVING COUNT(student) >= 5;

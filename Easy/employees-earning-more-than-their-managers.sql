@@ -2,7 +2,8 @@
 
 # Solution:
 
-SELECT E2.name AS 'Employee'
-FROM Employee as E1
-JOIN Employee as E2 ON E1.id = E2.managerId
+SELECT e2.name AS Employee
+FROM employee as e1
+JOIN employee as e2 
+ON e1.id = e2.managerId
 WHERE e1.salary < e2.salary;

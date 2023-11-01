@@ -2,7 +2,8 @@
 
 # Solution:
 
-SELECT customers.name AS 'Customers'
+SELECT name AS Customers
 FROM customers
-LEFT JOIN orders ON customers.id = orders.customerId
+LEFT JOIN orders
+ON customers.id = orders.customerId
 WHERE orders.customerId IS NULL;

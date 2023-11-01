@@ -2,7 +2,11 @@
 
 # Solution:
 
-SELECT `Employee`.`name`, `Bonus`.`bonus`
-FROM `Employee`
-LEFT JOIN `Bonus` ON `Employee`.`empID` = `Bonus`.`empID`
-WHERE `bonus` < 1000 OR `Bonus` IS NULL;
+SELECT 
+ e.name, 
+ b.bonus
+FROM employee AS e
+LEFT JOIN bonus AS b
+ON e.empID = b.empID
+WHERE bonus < 1000 
+OR bonus IS NULL;
