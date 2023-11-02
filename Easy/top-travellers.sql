@@ -2,8 +2,11 @@
 
 # Solution: 
 
-SELECT users.name, SUM(IFNULL(rides.distance, 0)) AS 'travelled_distance'
-FROM users
-LEFT JOIN rides ON users.id = rides.user_id
-GROUP BY rides.user_id, users.name
-ORDER BY travelled_distance DESC, users.name ASC;
+SELECT 
+  u.name,
+  SUM(IFNULL(r.distance, 0)) AS 'travelled_distance'
+FROM users AS u
+LEFT JOIN rides AS r
+ON u.id = r.user_id
+GROUP BY r.user_id, u.name
+ORDER BY travelled_distance DESC, u.name ASC;

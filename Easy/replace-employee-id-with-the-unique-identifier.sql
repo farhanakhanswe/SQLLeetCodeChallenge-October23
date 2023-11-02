@@ -2,7 +2,9 @@
 
 # Solution
   
-SELECT IFNULL(`EU`.`unique_id`, NULL) AS `unique_id`, `E`.`name`
-FROM `Employees` `E`
-LEFT JOIN `EmployeeUNI` `EU`
-ON `E`.`id` = `EU`.`id`;
+SELECT 
+    IFNULL(eU.unique_id, NULL) AS unique_id,
+    e.name
+FROM employees AS e
+LEFT JOIN employeeUNI AS eU
+ON e.id = eU.id;
